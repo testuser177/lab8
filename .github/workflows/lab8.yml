@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set environment variable with "key" as "foo" and "value" as "bar" 
-        run: echo "foo=bar" >> $GITHUB_ENV
+        run: echo "$GITHUB_ENV" 
 
       - name: Echo the environment variable "foo" from previous step
-        run: echo "Hello, $foo"
+        run: echo "$GITHUB_ENV" 
 
       - name: Mask the "api_key" within this steps's environment variable and echo it
         env:
