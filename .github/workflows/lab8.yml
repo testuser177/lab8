@@ -12,7 +12,7 @@ jobs:
         run: echo "foo=bar" >> $GITHUB_ENV 
 
       - name: Echo the environment variable "foo" from previous step
-        run: echo "$GITHUB_ENV" 
+        run: echo "Hello, $foo" 
 
       - name: Mask the "api_key" within this steps's environment variable and echo it
         env:
